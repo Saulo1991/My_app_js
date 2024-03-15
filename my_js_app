@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="saulo.css">
+</head>
+<body>
+    <input id="input" type="text" />
+    <button id="button">Adicione</button>
+    <div>
+        <ul id="ul">
+            <li>Trancar o portão</li>
+        </ul>
+    </div>
+</body>
+<script src="saulo.js"></script>
+</html>
+
+
+* {
+    color: rgb(18, 133, 18);
+    background-color: rgb(26, 24, 24);
+    font-family: monospace;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+#button {
+    border: 50px;
+    border-radius: 40px;
+    background-color: greenyellow;
+}
+
+
+document.getElementById("button").addEventListener("click", function() {
+    var input = document.getElementById("input").value;
+    document.getElementById("ul").innerHTML += `<li>${input}</li>`
+    document.getElementById("input").value = ""
+})
+
